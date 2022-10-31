@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='styles.css')}}"
+    />
+
+    <title>Emotion Detector</title>
+  </head>
+  <body class="ecss-selector">
+    <div class="container mt-5">
+      <h2 class="display-3">Select File</h2>
+      <form
+        name="frm"
+        method="POST"
+        action="{{url_for('after')}}"
+        enctype="multipart/form-data"
+      >
+        <div class="form-group">
+          <div class="custom-file my-3">
+            <input type="file" name="file1" />
+          </div>
+        </div>
+
+        <input type="submit" name="btn" class="btn btn-primary" />
+      </form>
+    </div>
+  </body>
+</html>
